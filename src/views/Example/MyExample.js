@@ -31,6 +31,20 @@ class MyExample extends React.Component {
       arrJobs: currentJob,
     });
   };
+
+  componentDidMount() {
+    console.log("check componentDidMount !🤬🤬");
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log(
+      "run componentDidUpdate",
+      "prev State :",
+      prevState,
+      "current state :",
+      this.state
+    );
+  }
   render() {
     return (
       <>
