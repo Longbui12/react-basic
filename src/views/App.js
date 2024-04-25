@@ -5,8 +5,8 @@ import ListTodo from "./Todos/ListTodo.js";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Nav from "./Nav/Nav.js";
-import HomePage from "./Example/Home.js";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import Home from "./Example/Home.js";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Contact from "./Example/Contact.js";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
 
           <Switch>
             <Route path="/" exact>
-              <HomePage />
+              <Home />
             </Route>
             <Route path="/about">
               <MyExample />
