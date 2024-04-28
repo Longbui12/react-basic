@@ -9,6 +9,7 @@ import Home from "./Example/Home.js";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Contact from "./Example/Contact.js";
 import ListUser from "./Users/ListUser.js";
+import DetailUser from "./Users/DetailUser.js";
 
 function App() {
   return (
@@ -31,8 +32,11 @@ function App() {
             <Route path="/contact">
               <Contact />
             </Route>
-            <Route path="/user">
+            <Route path="/user" exact>
               <ListUser />
+            </Route>
+            <Route path="/user/:id">
+              <DetailUser />
             </Route>
           </Switch>
         </header>
