@@ -23,7 +23,7 @@ class ListUser extends React.Component {
   }
 
   handleViewDetailUser = (user) => {
-    console.log("Check User : ", this.props);
+    // console.log("Check User : ", this.props);
     this.props.history.push(`/user/${user.id}`);
   };
   render() {
