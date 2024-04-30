@@ -1,7 +1,8 @@
 import React from "react";
 //import { withRouter } from "react-router-dom";
 import Color from "../HOC/Color";
-import avatar from "../../assets/images/397468199_6960756350686151_1708441086323802462_n.jpg";
+import avatar from "../../assets/images/194179727_4349960718453304_3003521712708585950_n.jpg";
+import { connect } from "react-redux";
 class Home extends React.Component {
   componentDidMount() {
     // setTimeout(() => {
@@ -25,5 +26,10 @@ class Home extends React.Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    dataRedux: state.users,
+  };
+};
 // export default withRouter(Home);
-export default Color(Home);
+export default connect(mapStateToProps)(Color(Home));
